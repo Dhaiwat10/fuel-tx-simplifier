@@ -1,0 +1,596 @@
+[
+  {
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "icon": "images/eth.svg",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "sepolia",
+              "decimals": 18
+          },
+          {
+              "type": "ethereum",
+              "chain": "foundry",
+              "decimals": 18
+          },
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "devnet",
+              "decimals": 9,
+              "assetId": "0xf8f8b6283d7fa5b672b530cbb84fcccb4ff8dc40f8176ef4544ddb1f1952ad07"
+          },
+          {
+              "type": "fuel",
+              "chain": "testnet",
+              "decimals": 9,
+              "assetId": "0xf8f8b6283d7fa5b672b530cbb84fcccb4ff8dc40f8176ef4544ddb1f1952ad07"
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9,
+              "assetId": "0xf8f8b6283d7fa5b672b530cbb84fcccb4ff8dc40f8176ef4544ddb1f1952ad07"
+          }
+      ]
+  },
+  {
+      "name": "Fuel",
+      "symbol": "FUEL",
+      "icon": "images/fuel.svg",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "sepolia",
+              "address": "0xd7fc4e8fb2c05567c313f4c9b9e07641a361a550",
+              "decimals": 9
+          },
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0x675b68aa4d9c2d3bb3f0397048e62e6b7192079c",
+              "decimals": 9
+          },
+          {
+              "type": "fuel",
+              "chain": "testnet",
+              "decimals": 9
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "WETH",
+      "symbol": "WETH",
+      "icon": "images/weth.svg",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "weETH",
+      "symbol": "weETH",
+      "icon": "images/weETH.webp",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "rsETH",
+      "symbol": "rsETH",
+      "icon": "images/rsETH.webp",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "rETH",
+      "symbol": "rETH",
+      "icon": "images/reth.svg",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0xae78736cd615f374d3085123a210448e74fc6393",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "wbETH",
+      "symbol": "wbETH",
+      "icon": "images/wbeth.png",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0xa2E3356610840701BDf5611a53974510Ae27E2e1",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "rstETH",
+      "symbol": "rstETH",
+      "icon": "images/rstETH.webp",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0x7a4EffD87C2f3C55CA251080b1343b605f327E3a",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "amphrETH",
+      "symbol": "amphrETH",
+      "icon": "images/amphrETH.png",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0x5fD13359Ba15A84B76f7F87568309040176167cd",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "Manta mBTC",
+      "symbol": "Manta mBTC",
+      "icon": "images/manta-mbtc.svg",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0x4041381e947CFD3D483d67a25C6aa9Dc924250c5",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "Manta mETH",
+      "symbol": "Manta mETH",
+      "icon": "images/manta-meth.svg",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0x8CdF550C04Bc9B9F10938368349C9c8051A772b6",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "Manta mUSD",
+      "symbol": "Manta mUSD",
+      "icon": "images/manta-musd.svg",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0x3f24E1d7a973867fC2A03fE199E5502514E0e11E",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "pumpBTC",
+      "symbol": "pumpBTC",
+      "icon": "images/pumpbtc.webp",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0xf469fbd2abcd6b9de8e169d128226c0fc90a012e",
+              "decimals": 8
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 8
+          }
+      ]
+  },
+  {
+      "name": "FBTC",
+      "symbol": "FBTC",
+      "icon": "images/fbtc.svg",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0xc96de26018a54d51c097160568752c4e3bd6c364",
+              "decimals": 8
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 8
+          }
+      ]
+  },
+  {
+      "name": "SolvBTC",
+      "symbol": "SolvBTC",
+      "icon": "images/solvBTC.webp",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0x7a56e1c57c7475ccf742a1832b028f0456652f97",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "SolvBTC.BBN",
+      "symbol": "SolvBTC.BBN",
+      "icon": "images/SolvBTC.BBN.png",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0xd9d920aa40f578ab794426f5c90f6c731d159def",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "Mantle mETH",
+      "symbol": "Mantle mETH",
+      "icon": "images/mantle-meth.svg",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0xd5F7838F5C461fefF7FE49ea5ebaF7728bB0ADfa",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "sDAI",
+      "symbol": "sDAI",
+      "icon": "images/sdai.svg",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0x83f20f44975d03b1b09e64809b757c47f942beea",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "USDT",
+      "symbol": "USDT",
+      "icon": "images/usdt.svg",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+              "decimals": 6
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 6
+          }
+      ]
+  },
+  {
+      "name": "USDC",
+      "symbol": "USDC",
+      "icon": "images/usdc.svg",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "decimals": 6
+          },
+          {
+              "type": "ethereum",
+              "chain": "sepolia",
+              "address": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+              "decimals": 6
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 6
+          },
+          {
+              "type": "fuel",
+              "chain": "testnet",
+              "decimals": 6
+          }
+      ]
+  },
+  {
+      "name": "USDe",
+      "symbol": "USDe",
+      "icon": "images/USDe.svg",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+              "decimals": 18
+          },
+          {
+              "type": "ethereum",
+              "chain": "sepolia",
+              "address": "0xc6387efad0f184a90b34f397c3d6fd63135ef790",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          },
+          {
+              "type": "fuel",
+              "chain": "testnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "sUSDe",
+      "symbol": "sUSDe",
+      "icon": "images/sUSDe.webp",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0x9d39a5de30e57443bff2a8307a4256c8797a3497",
+              "decimals": 18
+          },
+          {
+              "type": "ethereum",
+              "chain": "sepolia",
+              "address": "0xb8f4f4eafc1d2a3c0a4d519bbf1114c311cc9b1b",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          },
+          {
+              "type": "fuel",
+              "chain": "testnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "rsUSDe",
+      "symbol": "rsUSDe",
+      "icon": "images/rsUSDe.svg",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0x82f5104b23FF2FA54C2345F821dAc9369e9E0B26",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "wstETH",
+      "symbol": "wstETH",
+      "icon": "images/wsteth.svg",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+              "decimals": 18
+          },
+          {
+              "type": "ethereum",
+              "chain": "sepolia",
+              "address": "0xB82381A3fBD3FaFA77B3a7bE693342618240067b",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          },
+          {
+              "type": "fuel",
+              "chain": "testnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "ezETH",
+      "symbol": "ezETH",
+      "icon": "images/ezeth.webp",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "pzETH",
+      "symbol": "pzETH",
+      "icon": "images/pzETH.webp",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0x8c9532a60e0e7c6bbd2b2c1303f63ace1c3e9811",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "Re7LRT",
+      "symbol": "Re7LRT",
+      "icon": "images/Re7LRT.png",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0x84631c0d0081FDe56DeB72F6DE77abBbF6A9f93a",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "steakLRT",
+      "symbol": "steakLRT",
+      "icon": "images/steakLRT.png",
+      "networks": [
+          {
+              "type": "ethereum",
+              "chain": "mainnet",
+              "address": "0xBEEF69Ac7870777598A04B2bd4771c71212E6aBc",
+              "decimals": 18
+          },
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "decimals": 9
+          }
+      ]
+  },
+  {
+      "name": "USDF",
+      "symbol": "USDF",
+      "icon": "images/USDF.png",
+      "networks": [
+          {
+              "type": "fuel",
+              "chain": "mainnet",
+              "assetId": "0x33a6d90877f12c7954cca6d65587c25e9214c7bed2231c188981c7114c1bdb78",
+              "decimals": 9
+          }
+      ]
+  }
+]

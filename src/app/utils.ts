@@ -1,9 +1,9 @@
-import { bn, BN, Input, Output } from "fuels";
-import type { Transaction } from "../app/page";
+import { bn, BN, Input, Output, TransactionResult } from "fuels";
 
 type TransactionInput = Input & {
   assetId: string;
   amount: BN;
+  owner: string;
 };
 type TransactionOutput = Output & {
   owner?: string;
@@ -13,12 +13,12 @@ type TransactionOutput = Output & {
 };
 
 export const getInputsSentByUser = (
-  transaction: Transaction,
+  transaction: TransactionResult,
   userAddress: string
 ) => {
   if (!transaction) return [];
 
-  const inputs = transaction.inputs as TransactionInput[];
+  const inputs = transaction.transaction.inputs as TransactionInput[];
 
   return inputs?.filter(
     (input) =>
@@ -28,12 +28,12 @@ export const getInputsSentByUser = (
 };
 
 export const getOutputsSentToUser = (
-  transaction: Transaction,
+  transaction: TransactionResult,
   userAddress: string
 ) => {
   if (!transaction) return [];
 
-  const outputs = transaction.outputs as TransactionOutput[];
+  const outputs = transaction.transaction.outputs as TransactionOutput[];
 
   return outputs?.filter(
     (output) =>
@@ -43,7 +43,7 @@ export const getOutputsSentToUser = (
 };
 
 export const getRelevantInputsAndOutputs = (
-  transaction: Transaction,
+  transaction: TransactionResult,
   userAddress: string
 ) => {
   const inputs = getInputsSentByUser(transaction, userAddress);
@@ -65,7 +65,10 @@ type Asset = {
   amountOut: BN;
 };
 
-export const findNetAssetDelta = (inputs: TransactionInput[], outputs: TransactionOutput[]) => {
+export const findNetAssetDelta = (
+  inputs: TransactionInput[],
+  outputs: TransactionOutput[]
+) => {
   const assets: AssetIdToAsset = {};
 
   inputs.forEach((input) => {
@@ -113,13 +116,15 @@ export const isNetNegative = (amountIn: BN, amountOut: BN) => {
   return amountIn.gt(amountOut);
 };
 
-export const getUserAddressesFromTransaction = (transaction: Transaction) => {
+export const getUserAddressesFromTransaction = (
+  transaction: TransactionResult
+) => {
   const addresses: Set<string> = new Set();
 
   if (!transaction) return [];
 
-  const inputs = transaction.inputs as TransactionInput[];
-  const outputs = transaction.outputs as TransactionOutput[];
+  const inputs = transaction.transaction.inputs as TransactionInput[];
+  const outputs = transaction.transaction.outputs as TransactionOutput[];
 
   if (inputs) {
     inputs.forEach((input) => {
@@ -145,4 +150,73 @@ export const getUserAddressesFromTransaction = (transaction: Transaction) => {
 
 export const truncateAddress = (address: string) => {
   return `${address.slice(0, 6)}...${address.slice(-4)}`;
+};
+
+export const isTransactionTransfer = (transaction: TransactionResult) => {
+  // determine if the transaction is a transfer if two accounts are involved, and one account is sending and the other is receiving
+  const inputs = transaction.transaction.inputs as TransactionInput[];
+  const outputs = transaction.transaction.outputs as TransactionOutput[];
+
+  const inputAddresses = new Set(inputs.map((input) => input.owner));
+  const outputAddresses = new Set(
+    outputs.map((output) => output.to || output.owner)
+  );
+
+  console.log({
+    inputAddresses,
+    outputAddresses,
+  });
+
+  return inputAddresses.size === 1 && outputAddresses.size === 2;
+};
+
+export const determineSenderAndReceiver = (transaction: TransactionResult) => {
+  const inputs = transaction.transaction.inputs as TransactionInput[];
+  const outputs = transaction.transaction.outputs as TransactionOutput[];
+
+  const inputAddresses = new Set(inputs.map((input) => input.owner));
+  const outputAddresses = new Set(
+    outputs.map((output) => output.to || output.owner)
+  );
+
+  return {
+    sender: inputAddresses.values().next().value,
+    receiver: outputAddresses.values().next().value,
+  };
+};
+
+export const getTransferredAsset = (transaction: TransactionResult) => {
+  // look at the biggest output and return that output
+  const outputs = transaction.transaction.outputs as TransactionOutput[];
+  const biggestOutput = outputs.reduce((max, output) => {
+    return max.amount.gt(output.amount) ? max : output;
+  });
+
+  return biggestOutput;
+};
+
+export const getRandomSmileyEmoji = () => {
+  const emojis = [
+    "😈",
+    "🤓",
+    "🙃",
+    "😊",
+    "😎",
+    "🥳",
+    "😇",
+    "🤪",
+    "😋",
+    "🤗",
+    "😏",
+    "😌",
+    "🥰",
+    "😜",
+    "😝",
+    "🤠",
+    "🤡",
+    "😅",
+    "😄",
+    "😁",
+  ];
+  return emojis[Math.floor(Math.random() * emojis.length)];
 };

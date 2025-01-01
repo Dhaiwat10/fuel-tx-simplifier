@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Copy } from "lucide-react";
@@ -70,9 +71,9 @@ export default async function TransactionDetails({
         </div> */}
 
         {/* Header */}
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-4">
           <h1 className="text-2xl font-semibold">Transaction Details</h1>
-          <Tabs value="everyday" className="pointer-events-none">
+          <Tabs value="everyday" className="pointer-events-none mt-4 md:mt-0">
             <TabsList className="bg-zinc-800/50">
               <TabsTrigger
                 value="everyday"
@@ -154,7 +155,7 @@ export default async function TransactionDetails({
                     alt={fuelAsset?.name}
                     className="w-6 h-6"
                   />
-                  <span className="text-sm text-zinc-400">$294.54</span>
+                  <span className="hidden md:block text-sm text-zinc-400">$294.54</span>
                 </div>
               </div>
             </div>
@@ -232,7 +233,7 @@ export default async function TransactionDetails({
                   href={`/?tx=${txId}`}
                   className="text-sm text-emerald-400 hover:text-emerald-300 transition-colors underline decoration-zinc-500 decoration-dotted underline-offset-4"
                 >
-                  {txId}
+                  {truncateAddress(txId)}
                 </Link>
               </div>
             ))}

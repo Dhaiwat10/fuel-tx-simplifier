@@ -2,7 +2,6 @@ import { redirect } from "next/navigation";
 import { isTransactionTransfer } from "./utils";
 import { getTransactionSummary, Provider } from "fuels";
 import TransactionDetails from "@/components/tx-details";
-import { Separator } from "@/components/ui/separator";
 
 export default async function Home({
   searchParams,
@@ -32,15 +31,5 @@ export default async function Home({
     isTransfer,
   });
 
-  return (
-    <div className="flex flex-col">
-      <TransactionDetails transaction={transaction} />
-
-      <Separator />
-
-      <div className="flex flex-col">
-        <h1 className="text-2xl font-semibold">Accounts</h1>
-      </div>
-    </div>
-  );
+  return <TransactionDetails transaction={transaction} />;
 }
